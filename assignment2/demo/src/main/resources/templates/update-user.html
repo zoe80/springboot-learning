@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div>
+		<form action="#" th:action="@{/update/{id}(id=${user.id})}"
+			th:object="${user}" method="post">
+			<label for="name">Name</label> 
+			<input type="text" th:field="*{name}" id="name" placeholder="Name"> 
+			<span  th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+		    <label for="email">Email</label> <input type="text" th:field="*{email}"
+				id="email" placeholder="Email"> 
+			<span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span> 
+			<label for="team">Team</label> 
+			<input type="text" th:field="*{team}" id="team" placeholder="Team"> 
+			<span  th:if="${#fields.hasErrors('team')}" th:errors="*{team}"></span>
+			<label for="team">Assignment</label> 
+			<input type="text" th:field="*{assignment}" id="assignment" placeholder="Assignment"> 
+			<span  th:if="${#fields.hasErrors('assignment')}" th:errors="*{assignment}"></span>
+			<label for="team">Assignment2</label> 
+			<input type="text" th:field="*{assignment2}" id="assignment" placeholder="Assignment2"> 
+			<span  th:if="${#fields.hasErrors('assignment2')}" th:errors="*{assignment2}"></span>
+				<label for="team">Assignment3</label> 
+			<input type="text" th:field="*{assignment3}" id="assignment" placeholder="Assignment3"> 
+			<span  th:if="${#fields.hasErrors('assignment3')}" th:errors="*{assignment3}"></span>
+							<label for="team">Assignment4</label> 
+			<input type="text" th:field="*{assignment4}" id="assignment" placeholder="Assignment4"> 
+			<span  th:if="${#fields.hasErrors('assignment4')}" th:errors="*{assignment4}"></span>
+							<label for="team">Assignment5</label> 
+			<input type="text" th:field="*{assignment5}" id="assignment" placeholder="Assignment5"> 
+			<span  th:if="${#fields.hasErrors('assignment5)}" th:errors="*{assignment5}"></span>
+			<input	type="submit" value="Update User">
+		</form>
+	</div>
+</body>
+</html>

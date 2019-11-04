@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dalaoyang</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css" />
+    <script src="/webjars/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container"><br/>
+     <h1>Add Users</h1> 
+     <form action="#" th:action="@{/adduser}" th:object="${user}"
+			method="post">
+			<label for="name">Name</label> 
+			<input type="text" th:field="*{name}" id="name" placeholder="Name"> 
+			<span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span> 
+			<label for="email">Email</label> <input type="text" th:field="*{email}" id="email" placeholder="Email"> 
+			<span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span> 
+			<label for="name">Team</label> 
+			<input type="text" th:field="*{team}" id="team" placeholder="Team"> 
+			<label for="assignment">Assignment</label> 
+			<input type="text" th:field="*{assignment}" id="assignment" placeholder="Assignment"> 
+			<label for="assignment2">Assignment2</label> 
+			<input type="text" th:field="*{assignment2}" id="assignment2" placeholder="Assignment2"> 
+			<label for="assignment">Assignment3</label> 
+			<input type="text" th:field="*{assignment3}" id="assignment3" placeholder="Assignment3"> 
+			<label for="assignment">Assignment4</label> 
+			<input type="text" th:field="*{assignment4}" id="assignment4" placeholder="Assignment4"> 
+			<label for="assignment">Assignment5</label> 
+			<input type="text" th:field="*{assignment5}" id="assignment5" placeholder="Assignment5"> 
+			<input type="submit" value="Add User">
+		</form>
+    </div>
+</div>
+</body>
+</html>
